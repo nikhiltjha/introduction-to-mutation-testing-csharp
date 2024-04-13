@@ -11,9 +11,9 @@
                 return true;
             }
 
-            char firstChar = word[0];
-            char lastChar = word[word.Length - 1];
-            string center = word.Substring(1, word.Length - 2);
+            var firstChar = word[0];
+            var lastChar = word[^1];
+            var center = word[1..^1];
             return (firstChar == lastChar) && IsPalindrome(center);
         }
     }
